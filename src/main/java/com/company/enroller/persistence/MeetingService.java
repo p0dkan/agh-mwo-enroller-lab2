@@ -53,6 +53,4 @@ public class MeetingService {
 		transaction.commit();
 	}
 
-	public Collection<Meeting> findByTitle(String title) {}
-
 }
