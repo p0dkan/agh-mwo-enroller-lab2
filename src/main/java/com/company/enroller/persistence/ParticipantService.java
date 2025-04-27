@@ -21,10 +21,7 @@ public class ParticipantService {
         hql += " WHERE Login LIKE \'%" + key + "%\'";
 
         if("ASC".equalsIgnoreCase(sortOrder) || "DESC".equalsIgnoreCase(sortOrder)) {
-
-//            hql += " ORDER BY Login " + sortOrder;
             hql += " ORDER BY Login " + sortOrder;
-            System.out.println(hql);
         }
         Query query = connector.getSession().createQuery(hql);
         return query.list();
