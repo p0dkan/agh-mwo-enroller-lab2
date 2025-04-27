@@ -1,6 +1,7 @@
 package com.company.enroller.persistence;
 
 import com.company.enroller.model.Meeting;
+import com.company.enroller.model.Participant;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -25,6 +26,10 @@ public class MeetingService {
 		return query.list();
 	}
 
+//	pobieranie uczestników do spotkania
+//	public Colllection<Participant> getParticipant(){
+//	}
+
 	public Meeting findById(long id) {
 		return connector.getSession().get(Meeting.class, id);
 	}
@@ -47,5 +52,7 @@ public class MeetingService {
 		connector.getSession().delete(meeting);
 		transaction.commit();
 	}
+
+	public Collection<Meeting> findByTitle(String title) {}
 
 }

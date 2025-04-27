@@ -64,4 +64,14 @@ public class MeetingRestController {
         return new ResponseEntity<Participant>(HttpStatus.OK);
     }
 
+//    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+//    public ResponseEntity<?> getMeetingParticipant(@PathVariable("id") long id) {
+//        Meeting meeting = meetingservice.findById(id);
+//        if (meeting == null) {
+//            return new ResponseEntity(HttpStatus.NOT_FOUND);
+//        }
+//        meetingservice.findById(id);
+//    }
+    // dodać pobieranie participants. (dodać metodę do meetingService
+
 }
